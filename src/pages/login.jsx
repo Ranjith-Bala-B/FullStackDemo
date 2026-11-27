@@ -51,17 +51,19 @@ function handlechange(e){
         <button type="submit">Submit</button>
     </form>
     */}
+<div className="min-h-screen flex justify-center items-center bg-gray-300">
+    <form onSubmit={print} className="bg-white flex flex-col gap-4 px-8 py-10  border">
+        <h1 className="text-center text-2xl font-semibold ">Login</h1>
 
-    <form onSubmit={print}>
         <label>Username </label>
-        <input placeholder="Enter username" required type="text" name="user" onChange={handlechange} />
+        <input className="border border-black p-1 rounded-2xl" placeholder="Enter username" required type="text" name="user" onChange={handlechange} />
 
         <label>Password </label>
-        <input placeholder="Enter Password" required type="password" name="pass" onChange={handlechange} />
+        <input className="border border-black p-1 rounded-2xl mb-8" placeholder="Enter Password" required type="password" name="pass" onChange={handlechange} />
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-black text-white p-1 rounded-3xl">Submit</button>
     </form>
-
+</div>
     </>
     );
 }
