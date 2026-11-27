@@ -48,7 +48,7 @@ function handlechange(e){
         <label>Password </label>
         <input placeholder="Enter Password" required type="password" value={pass} onChange={(e)=>setPass(e.target.value)} />
 
-        <button type="submit">Submit</button>
+        <button type="submit">Submit.</button>
     </form>
     */}
 <div className="min-h-screen flex justify-center items-center bg-gray-300">
