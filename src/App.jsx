@@ -10,6 +10,10 @@ import Dashboard from "./pages/dashboard";
 import Settings from "./pages/settings";
 import Team from "./pages/team";
 import Register from "./pages/register";
+import Adminlayout from "./pages/Admin/adminlayout";
+import AdminDashboard from "./pages/Admin/dashboard";
+import UserDetails from "./pages/Admin/userDetails";
+import AdminSettings from "./pages/Admin/settings";
 
 function App(){
   return (
@@ -24,6 +28,11 @@ function App(){
       <Route path="/settings" element={<Settings/>} />
       <Route path="/team" element={<Team/>} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin" element={<Adminlayout />} >
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="userDetails" element={<UserDetails />} />
+        <Route path="settings" element={<AdminSettings />} />
+      </Route>
     </Routes>
     </BrowserRouter>
   );

@@ -1,18 +1,26 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Login(){
     const navigate=useNavigate();
+    const location = useLocation();
+    const registerdata = location.state;
     //const[email,setEmail]=useState("")
     //const[pass,setPass]=useState("")
     const[formdata,setFormdata]=useState({user:"",pass:""})
 
     const print = (e)=>{
         e.preventDefault();
-        console.log("Login Page",formdata)
-        alert("Login Succesfull")
-        navigate("/dashboard",{state:formdata})
-    };
+        console.log("Register data",registerdata)
+        console.log("Login data",formdata)
+        if(formdata.user===registerdata.name && formdata.pass===registerdata.password){
+            console.log("Login Success")
+            navigate("/dashboard",{state:formdata})
+        }else{
+            console.log("Invalid credentials")
+        }
+    }
 
 function handlechange(e){
     e.preventDefault();
@@ -45,7 +53,7 @@ function handlechange(e){
     */}
 
     <form onSubmit={print}>
-        <label>Email </label>
+        <label>Username </label>
         <input placeholder="Enter username" required type="text" name="user" onChange={handlechange} />
 
         <label>Password </label>

@@ -13,7 +13,7 @@ function Dashboard() {
         <>
             <button onClick={displaydata}>button</button>
         </>
-     );
+    );
 }
 
 export default Dashboard;

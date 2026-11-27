@@ -12,7 +12,7 @@ function Register() {
     function onSubmit1(data){
         console.log(data)
         alert("register succes")
-        navigate("/")
+        navigate("/", {state: data})
     }
     return (
         <>
@@ -22,7 +22,7 @@ function Register() {
             <p>{errors.name?.message}</p>
 
             <label>Email </label>
-            <input placeholder="Enter your name" type="email" {...register("email")} />
+            <input placeholder="Enter your email" type="email" {...register("email")} />
             <p>{errors.email?.message}</p>
 
             <label>Password </label>
