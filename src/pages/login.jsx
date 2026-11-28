@@ -18,7 +18,7 @@ function Login(){
             console.log("Login Success")
             navigate("/dashboard",{state:formdata})
         }else{
-            console.log("Invalid credentials")
+            console.log("Invalid credentials.")
         }
     }
 
